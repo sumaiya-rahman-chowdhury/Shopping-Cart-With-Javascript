@@ -1,6 +1,12 @@
 let total = 0 ;
 let selectedCount = 0;
 function handleClick(target) {
+    const nodeListLenght = document.querySelectorAll('li');
+    console.log(nodeListLenght)
+    if(nodeListLenght.length>=4){
+        alert("You can only select up to four items.");
+        return ;
+    }
     // if (selectedCount >= 4) {
     //     alert("You can only select up to four items.");
     //     return;
@@ -17,12 +23,7 @@ function handleClick(target) {
     // console.log(li) ;
     selectedItemsList.appendChild(li);
  
-    const nodeListLenght = document.querySelectorAll('li');
-    console.log(nodeListLenght)
-    if(nodeListLenght.length>=4){
-        alert("You can only select up to four items.");
-        return ;
-    }
+   
 
     // console.log(target.parentNode.childNodes[3].childNodes[3].childNodes[1])
     const price = target.parentNode.childNodes[3].childNodes[3].childNodes[1].innerText;
@@ -32,7 +33,7 @@ function handleClick(target) {
     // const price = target.parentNode.childNodes[3].childNodes[3].childNodes[1].innerText.split(" ") ;
     //    console.log(typeof(price))
     // 
-
+   
 // selectedCount ++
 total = parseFloat(price) + parseFloat(total) ;
 // console.log(total) ;
