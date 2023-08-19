@@ -34,5 +34,9 @@ function handleClick(target) {
     // 
 
 // selectedCount ++
+total = parseFloat(price) + parseFloat(total) ;
+// console.log(total) ;
+document.getElementById('total').innerText = total ;
+
 
 }
