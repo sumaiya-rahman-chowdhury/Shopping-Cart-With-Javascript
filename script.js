@@ -23,6 +23,7 @@ function handleClick(target) {
     // console.log(li) ;
     selectedItemsList.appendChild(li);
  
+    console.log(selectedItemsList)
    
 
     // console.log(target.parentNode.childNodes[3].childNodes[3].childNodes[1])
